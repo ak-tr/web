@@ -52,6 +52,10 @@
         max-width: 1024px;
       }
 
+      th.count {
+        width: 5%;
+      }
+
       h2 {
         text-align: center;
         padding-top: 10px;
@@ -59,8 +63,14 @@
       }
 
       .btn {
-        color: #06cccc;
-        border-color: #06cccc;
+        height: 100%;
+        background-color: #06cccc;
+        color: white;
+        font-size: 20px;
+      }
+
+      nav h2 {
+        padding-right: 10px;
       }
     </style>
   </head>
@@ -68,16 +78,18 @@
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/litta-technology.appspot.com/o/web_images%2FLITTA_Horizontal_Gloss_Logo.jpg?alt=media&token=4a540f9d-943e-408e-afe1-fa0f33ca0a73"
+          src="https://firebasestorage.googleapis.com/v0/b/litta-technology.appspot.com/o/web_images%2FLITTA_Horizontal_Gloss_Internal_Logo_Transparent.png?alt=media&token=4542f018-36bc-4f1b-921e-e7d87afc52bf"
           height="60"
           alt="LITTA Logo"
         />
       </a>
+      <h2>{{date}}</h2>
     </nav>
     <div class="container-fluid">
-      <h2>Daily Job Summary</h2>
+      <h2>Daily Job Summary ({{title}})</h2>
       <table>
         <tr>
+          <th class="count">#</th>
           <th class="reference">LTA</th>
           <th class="timeslot">Time Slot</th>
           <th class="address">Address</th>
@@ -85,6 +97,7 @@
         </tr>
         {{#each summary}}
         <tr>
+          <td>{{@index}}</td>
           <td>{{this.reference}}</td>
           <td>{{this.time_slot}}</td>
           <td>{{this.address}}</td>
@@ -93,7 +106,11 @@
         {{/each}}
       </table>
       <div class="d-flex justify-content-center py-3">
-        <button type="button" class="btn btn-outline-link">
+        <button
+          type="button"
+          class="btn btn-light"
+          href="https://jobs.litta.co/carrier/accept/{{id}}"
+        >
           Acknowledge Jobs
         </button>
       </div>
