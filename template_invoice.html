@@ -1071,10 +1071,12 @@
               <th>ITEM DESCRIPTION</th>
               <th>PRICE</th>
             </tr>
+            {{#each items}}
             <tr>
-              <td>{{{items}}}</td>
-              <td>{{total}}</td>
+              <td>{{{this.item}}}</td>
+              <td>{{this.price}}</td>
             </tr>
+            {{/each}}
           </tbody>
         </table>
         <hr class="solid" />
