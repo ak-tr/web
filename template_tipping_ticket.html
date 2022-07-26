@@ -2,12 +2,14 @@
 <html>
   <head>
     <style>
+      {{#each font}}
       @font-face {
           font-family: "Poppins";
           font-style: normal;
-          font-weight: 400;
-          src: url("data:font/truetype;charset=utf-8;base64,{{font}}") format("truetype");
+          font-weight: {{this.weight}};
+          src: url("data:font/truetype;charset=utf-8;base64,{{this.data}}") format("truetype");
       }
+      {{/each}}
 
       /* @font-face {
         font-family: "Poppins";
