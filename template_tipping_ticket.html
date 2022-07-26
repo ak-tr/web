@@ -2,36 +2,9 @@
 <html>
   <head>
     <style>
-      {{#each font}}
-      @font-face {
-          font-family: "Poppins";
-          font-style: normal;
-          font-weight: {{this.weight}};
-          src: url("data:font/truetype;charset=utf-8;base64,{{this.data}}") format("truetype");
-      }
-      {{/each}}
-
-      /* @font-face {
-        font-family: "Poppins";
-        src: url("https://raw.githubusercontent.com/ak-tr/web/main/fonts/Poppins-Medium.ttf") format("truetype");
-        font-weight: 500; 
-      }
-
-      @font-face {
-        font-family: "Poppins";
-        src: url("https://raw.githubusercontent.com/ak-tr/web/main/fonts/Poppins-SemiBold.ttf") format("truetype");
-        font-weight: 600; 
-      }
-
-      @font-face {
-        font-family: "Poppins";
-        src: url("https://raw.githubusercontent.com/ak-tr/web/main/fonts/Poppins-Bold.ttf") format("truetype");
-        font-weight: 900;
-      } */
-
       * {
         box-sizing: border-box;
-        font-family: "Poppins";
+        font-family: "Arial";
       }
 
       .page {
