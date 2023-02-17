@@ -1053,7 +1053,7 @@
         width: 93%;
         height: 52%;
         font-family: Poppins;
-        font-size: 10.7px;
+        font-size: 9px;
         font-weight: 300;
         background: white;
         opacity: 1;
@@ -1149,7 +1149,12 @@
         <h4>SECTION A – DESCRIPTION OF WASTE</h4>
           A1.  Description of Waste: {{description}}<br>
           A2. Waste Amount: {{wasteAmount}}<br>
-          {{{materialsCollected}}}
+          {{{materialsCollected}}}<br>
+          {{#if wasteType}}
+          A3. Waste Type {{{wasteType}}}<br>
+          SIC Code: {{{clientSicCode}}}<br>
+          LOW Code: {{{lowCode}}}
+          {{/if}}
 
 
           <h4>SECTION B – CURRENT HOLDER OF THE WASTE - TRANSFEROR</h4>
@@ -1165,13 +1170,18 @@
           Waste Carrier Licence Number: {{bCarrierNumber}}<br>
 
 
-          <h4>SECTION E - THE TRANSFER</h4>
+          <h4>SECTION D - THE TRANSFER</h4>
           Address of Transfer: {{trAddress}}<br>
           Date & Time of Transfer: {{trDate}}<br>
           Broker: LITTA APP LTD<br>
           Broker Address: Sopers House, Sopers Road, Cuffley, EN6 4RY<br>
           Waste Registration Number: CBDU375738<br>
 
+          {{#if disposalSite}}
+          <h4>SECTION E - DISPOSAL SITE DETAILS</h4>
+          Disposal Site: {{{disposalSite}}}<br>
+          Disposal Site License: {{{disposalSiteLicense}}}<br>
+          {{/if}}
       </div>
       <div class="lower_left">
         <h4>TRANSFEREE'S SIGNATURE</h4>
