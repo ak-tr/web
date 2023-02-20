@@ -1048,10 +1048,9 @@
         overflow: hidden;
       }
 
-
       .main {
         width: 93%;
-        height: 52%;
+        height: 57%;
         font-family: Poppins;
         font-size: 9px;
         font-weight: 300;
@@ -1066,12 +1065,12 @@
 
       .lower_left {
         width: 100%;
-        height: 21%;
+        height: 13%;
         font-family: Poppins;
         font-size: 11px;
         opacity: 1;
         position: relative;
-        top: 122.5px;
+        top: 132px;
         left: 21px;
         overflow: hidden;
         padding-left: 10px;
@@ -1079,12 +1078,12 @@
 
       .lower_right {
         width: 46.5%;
-        height: 21%;
+        height: 13%;
         font-family: Poppins;
         font-size: 11px;
         opacity: 1;
         position: relative;
-        top: -54.5px;
+        top: 22.5px;
         left: 300px;
         overflow: hidden;
         padding-left: 10px;
@@ -1098,15 +1097,20 @@
         font-size: 6px;
         opacity: 1;
         position: relative;
-        top: -61px;
+        top: 30px;
         left: 21px;
         overflow: hidden;
         padding-left: 10px;
       }
 
       .main h4 {
-        padding-top:5px;
+        /* padding-top:5px; */
         line-height: 0px;
+        font-size: 9px;
+      }
+      
+      .main {
+        font-size: 9px;
       }
 
       .lower_left h4 {
@@ -1167,6 +1171,7 @@
           <h4>CURRENT HOLDER OF THE WASTE - TRANSFEROR</h4>
           By signing in Section E below I confirm that I have fulfilled my duty to apply the waste hierarchy as required by Regulation 12 of the Waste (England and Wales) Regulations 2011:<br>
           Name and Address: {{name}}, {{address}}<br>
+          SIC Code: {{{clientSicCode}}}<br>
           {{{sicCodes}}}
 
           <h4>PERSON COLLECTING THE WASTE - TRANSFEREE</h4>
@@ -1174,7 +1179,6 @@
           Business Address: {{bAddress}}<br>
           Business Name: {{bCompany}}<br>
           Waste Carrier Licence Number: {{bCarrierNumber}}<br>
-          SIC Code: {{{clientSicCode}}}<br>
           {{#if vehicleReg}}
           Vehicle Reg: {{{vehicleReg}}}<br>
           Container Type: Loose<br>
