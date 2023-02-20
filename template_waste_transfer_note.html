@@ -1065,7 +1065,7 @@
       }
 
       .lower_left {
-        width: 46.5%;
+        width: 100%;
         height: 21%;
         font-family: Poppins;
         font-size: 11px;
@@ -1140,6 +1140,7 @@
 
       .overflow {
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
     </style>
   </head>
@@ -1194,7 +1195,7 @@
       <div class="lower_left">
         <h4>TRANSFEREE'S SIGNATURE</h4>
         <img src="{{bSig}}"
-        width="250px"
+        width="150px"
         height="100px">
         <h5>SIGNED FOR BY: {{bName}}</h5>
         <h5 class="overflow">ON BEHALF OF: {{bCompany}}</h5>
