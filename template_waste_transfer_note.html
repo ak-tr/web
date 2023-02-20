@@ -1137,6 +1137,10 @@
         opacity: 1;
         text-align: center;
       }
+
+      .overflow {
+        text-overflow: ellipsis;
+      }
     </style>
   </head>
 
@@ -1190,10 +1194,10 @@
       <div class="lower_left">
         <h4>TRANSFEREE'S SIGNATURE</h4>
         <img src="{{bSig}}"
-        width="150px"
+        width="250px"
         height="100px">
         <h5>SIGNED FOR BY: {{bName}}</h5>
-        <h5>ON BEHALF OF: {{bCompany}}</h5>
+        <h5 class="overflow">ON BEHALF OF: {{bCompany}}</h5>
       </div>
       <div class="lower_right">
         <h4>TRANSFEROR'S SIGNATURE</h4>
