@@ -1168,7 +1168,11 @@
           Business Address: {{bAddress}}<br>
           Business Name: {{bCompany}}<br>
           Waste Carrier Licence Number: {{bCarrierNumber}}<br>
-
+          {{#if vehicleReg}}
+          Vehicle Reg: {{{vehicleReg}}}<br>
+          Container Type: Van<br>
+          Movement Type: Wait and Load
+          {{/if}}
 
           <h4>SECTION D - THE TRANSFER</h4>
           Address of Transfer: {{trAddress}}<br>
