@@ -1151,43 +1151,43 @@
       <div class="sep_1"></div>
       <div class="main">
 
-        <h4>SECTION A – DESCRIPTION OF WASTE</h4>
-          A1.  Description of Waste: {{description}}<br>
-          A2. Waste Amount: {{wasteAmount}}<br>
+          <h4>COLLECTION DETAILS</h4>
+          Address of Transfer: {{trAddress}}<br>
+          Date & Time of Transfer: {{trDate}}<br>
+
+          <h4>DESCRIPTION OF WASTE</h4>
+          Description of Waste: {{description}}<br>
+          Waste Amount: {{wasteAmount}}<br>
           {{{materialsCollected}}}
           {{#if wasteType}}
-          A3. Waste Type: {{{wasteType}}}<br>
-          SIC Code: {{{clientSicCode}}}<br>
-          LOW Code: {{{lowCode}}}
+          Waste Type: {{{wasteType}}}<br>
+          EWC Code: {{{ewcCode}}}
           {{/if}}
 
-
-          <h4>SECTION B – CURRENT HOLDER OF THE WASTE - TRANSFEROR</h4>
+          <h4>CURRENT HOLDER OF THE WASTE - TRANSFEROR</h4>
           By signing in Section E below I confirm that I have fulfilled my duty to apply the waste hierarchy as required by Regulation 12 of the Waste (England and Wales) Regulations 2011:<br>
           Name and Address: {{name}}, {{address}}<br>
           {{{sicCodes}}}
 
-
-          <h4>SECTION C - PERSON COLLECTING THE WASTE - TRANSFEREE</h4>
+          <h4>PERSON COLLECTING THE WASTE - TRANSFEREE</h4>
           Full Name: {{bName}}<br>
           Business Address: {{bAddress}}<br>
           Business Name: {{bCompany}}<br>
           Waste Carrier Licence Number: {{bCarrierNumber}}<br>
+          SIC Code: {{{clientSicCode}}}<br>
           {{#if vehicleReg}}
           Vehicle Reg: {{{vehicleReg}}}<br>
-          Container Type: Van<br>
+          Container Type: Loose<br>
           Movement Type: Wait and Load
           {{/if}}
 
-          <h4>SECTION D - THE TRANSFER</h4>
-          Address of Transfer: {{trAddress}}<br>
-          Date & Time of Transfer: {{trDate}}<br>
+          <h4>BROKER DETAILS</h4>
           Broker: LITTA APP LTD<br>
           Broker Address: Sopers House, Sopers Road, Cuffley, EN6 4RY<br>
           Waste Registration Number: CBDU375738<br>
 
           {{#if disposalSite}}
-          <h4>SECTION E - DISPOSAL SITE DETAILS</h4>
+          <h4>DISPOSAL SITE DETAILS</h4>
           Disposal Site: {{{disposalSite}}}<br>
           Disposal Site License: {{{disposalSiteLicense}}}<br>
           {{/if}}
