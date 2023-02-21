@@ -1163,7 +1163,9 @@
           <h4>DESCRIPTION OF WASTE</h4>
           Description of Waste: {{description}}<br>
           Waste Amount: {{wasteAmount}}<br>
+          {{#if materialsCollected}}
           {{{materialsCollected}}}
+          {{/if}}
           {{#if wasteType}}
           Waste Type: {{{wasteType}}}<br>
           EWC Code: {{{ewcCode}}}
@@ -1173,7 +1175,9 @@
           By signing in Section E below I confirm that I have fulfilled my duty to apply the waste hierarchy as required by Regulation 12 of the Waste (England and Wales) Regulations 2011:<br>
           Name: {{name}}<br>
           SIC Code: {{{clientSicCode}}}<br>
+          {{#if sicCodes}}
           {{{sicCodes}}}
+          {{/if}}
 
           <h4>PERSON COLLECTING THE WASTE - TRANSFEREE</h4>
           Full Name: {{bName}}<br>
