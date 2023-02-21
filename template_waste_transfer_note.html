@@ -1163,12 +1163,12 @@
           <h4>DESCRIPTION OF WASTE</h4>
           Description of Waste: {{description}}<br>
           Waste Amount: {{wasteAmount}}<br>
-          {{#if materialsCollected}}
-          {{{materialsCollected}}}
-          {{/if}}
           {{#if wasteType}}
           Waste Type: {{{wasteType}}}<br>
           EWC Code: {{{ewcCode}}}
+          {{/if}}
+          {{#if materialsCollected}}
+          <br>{{{materialsCollected}}}
           {{/if}}
 
           <h4>CURRENT HOLDER OF THE WASTE - TRANSFEROR</h4>
@@ -1176,7 +1176,7 @@
           Name: {{name}}<br>
           SIC Code: {{{clientSicCode}}}
           {{#if sicCodes}}
-          {{{sicCodes}}}
+          <br>{{{sicCodes}}}
           {{/if}}
 
           <h4>PERSON COLLECTING THE WASTE - TRANSFEREE</h4>
@@ -1198,7 +1198,7 @@
           {{#if disposalSite}}
           <h4>DISPOSAL SITE DETAILS</h4>
           Disposal Site: {{{disposalSite}}}<br>
-          Disposal Site License: {{{disposalSiteLicense}}}<br>
+          Disposal Site License: {{{disposalSiteLicense}}}
           {{/if}}
       </div>
       <div class="lower_left">
