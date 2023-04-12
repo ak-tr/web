@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const button = document.getElementById("download");
+
+      const print = () => {
+        window.print();
+      }
+    </script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+      * {
+        font-family: "Poppins";
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+      }
+
+      .web {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .button {
+        cursor: pointer;
+        font-size: 13px;
+        background: #06cccc;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 6px;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+        transition: filter 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .button:hover {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+      }
+
+      .page {
+        display: flex;
+        width: 595px;
+        height: 842px;
+        background: rgba(255, 255, 255, 1);
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 5px 70px 1fr 75px;
+      }
+
+      .top-bar {
+        background-color: #06cccc;
+      }
+
+      .header .logo {
+        max-height: 30px;
+      }
+
+      .logo {
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      .header {
+        display: flex;
+        padding: 8px 0;
+        margin: 0 25px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .page > .content {
+        margin: 5px 25px;
+      }
+
+      .footer {
+        padding: 8px 0;
+        margin: 0 25px;
+        border-top: 1px solid rgba(0, 0, 0, 0.75);
+
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        column-gap: 10px;
+      }
+
+      .footer > .content {
+        font-size: 11px;
+        color: rgb(128, 128, 128);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer > .content > .links {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      a {
+        text-decoration: underline;
+        color: inherit
+      }
+
+      @media print {
+        .page {
+          filter: none;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          transform-origin: top left;
+          transform: scale(1.41);
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .button {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="web">
+      <div class="page scaled">
+        <div class="top-bar"></div>
+        <div class="header">
+          <img
+            class="logo"
+            src="https://firebasestorage.googleapis.com/v0/b/litta-technology.appspot.com/o/web_images%2FLITTA_Horizontal_Gloss_Logo.jpg?alt=media&token=4a540f9d-943e-408e-afe1-fa0f33ca0a73"
+          />
+          <span>{{ reference }}</span>
+        </div>
+        <div class="content"></div>
+        <div class="footer">
+          <img
+            class="logo"
+            src="https://firebasestorage.googleapis.com/v0/b/litta-technology.appspot.com/o/web_images%2FGloss%20Icon.png?alt=media&token=73da9035-603e-478b-b5b6-2ae11b7d6c4c"
+          />
+          <div class="content">
+            <span>Company Registration No: 10882506</span>
+            <span>Environment Agency Registration No: CBDU375738</span>
+            <div class="links">
+              <a href="https://litta.co">litta.co</a>
+              <a href="mailto:hi@litta.co">hi@litta.co</a>
+              <a href="tel:+08000119492">0800 011 9492</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="download" class="button" onclick="print()">Download PDF</div>
+    </div>
+  </body>
+</html>
