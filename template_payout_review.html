@@ -191,27 +191,43 @@
           <div class="all-images">
             <div class="images">
               <span class="title">All Before Images</span>
+              {{#if beforeImages}}
               {{#each beforeImages}}
                 <img src="{{this}}">
               {{/each}}
+              {{else}}
+                <span>No images provided</span>
+              {{/if}}
             </div>
             <div class="images">
               <span class="title">All After Images</span>
+              {{#if afterImages}}
               {{#each afterImages}}
                 <img src="{{this}}">
               {{/each}}
+              {{else}}
+                <span>No images provided</span>
+              {{/if}}
             </div>
             <div class="images">
               <span class="title">Van Before Images</span>
+              {{#if vanBeforeImages}}
               {{#each vanBeforeImages}}
                 <img src="{{this}}">
               {{/each}}
+              {{else}}
+                <span>No images provided</span>
+              {{/if}}
             </div>
             <div class="images">
               <span class="title">Van After Images</span>
+              {{#if vanAfterImages}}
               {{#each vanAfterImages}}
                 <img src="{{this}}">
               {{/each}}
+              {{else}}
+                <span>No images provided</span>
+              {{/if}}
             </div>
           </div>
         </div>
